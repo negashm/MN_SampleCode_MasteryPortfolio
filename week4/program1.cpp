@@ -1,24 +1,31 @@
 #include <iostream>
-#include <math.h>
+#include <cmath>
 using namespace std;
-
 int main()
 {
-	float num[10];
-	int i;
-	float total = 0;
-	float newTotal = 0;
-	for (i = 0; i < 10; i++)
-	{
-		cout << "\nPlease enter an integer value: ";
-		cin >> num[i];
-		total = total + num[i];
-		num[i] = sqrt(num[i] - (total / 10));
-		newTotal = newTotal + num[i];
-	}
+	int num[10];
 	
-	std::cout << "\nThe new mean is: " << newTotal / 10;
-	std::cout << "\nThe square root of the mean is: " << sqrt(newTotal / 10);
+	int averageTotal = 0;
+	
+	int stdTotal = 0;
+	
+	for (int i = 0; i < 10; i++)
+	
+    {
+		cout << "Enter a whole number" << i << " : ";
+		cin >> num[i];
+		cout << endl;
+		averageTotal += num[i];
 
+	}
+	double mean = averageTotal / 10;
+	for (int i = 0; i < 10; i++)
+	{
+		stdTotal += pow(num[i] - mean, 2);
+	}
+	double std = sqrt(stdTotal / 10);
+	cout << "The mean of these numbers is" << mean << endl;
+	cout << "The standard deviation of these numbers is" << std << endl;
+	system("pause");
 	return 0;
 }
