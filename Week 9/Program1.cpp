@@ -112,7 +112,6 @@ int main() {
 	node linked_list;
 	road_vehicle vehicle;
 	string myvalue;
-	bool c = true;
 	int value;
 	while (c)
 	{
