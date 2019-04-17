@@ -65,6 +65,7 @@ public:
 	void set_str(type t) { car_type = t; }
 	enum type get_str() { return car_type; }
 };
+//Define Node Linked List
 class node
 {
 public:
