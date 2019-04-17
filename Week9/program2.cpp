@@ -1,5 +1,4 @@
-//Populate the objects with data from the file! Store the objects in a Linked List!
-//Experiencing some difficulty in regards to the output of the data. 
+//Populate the objects with data from the file! Store the objects in a Linked List! 
 
 #include <iostream>
 #include <string>
@@ -102,3 +101,5 @@ in.open("test.txt");
   } 
 return 0;
 }
+
+//Experiencing some difficulty in regards to the output of the data.
