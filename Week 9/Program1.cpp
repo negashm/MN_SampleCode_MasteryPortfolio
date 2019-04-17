@@ -168,7 +168,7 @@ int main() {
 
 	linked_list.print_data();
   
-  else cout << "Unable to open";
+  	else cout << "Unable to open";
 	out.close();
 	system("pause");
 	return 0;
