@@ -1,5 +1,5 @@
 //Populate the objects with data from the file! Store the objects in a Linked List!
-//Having difficulty in regards to the output of the data. 
+//Experiencing some difficulty in regards to the output of the data. 
 
 #include <iostream>
 #include <string>
@@ -57,7 +57,7 @@ public:
 	}
 };
 
-
+//Define Automobile 
 enum type { car, van, wagon };
 class automobile : public road_vehicle {
 	enum type car_type;
