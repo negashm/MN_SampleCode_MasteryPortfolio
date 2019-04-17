@@ -7,7 +7,8 @@ using namespace std;
 
 //Define class for vehicles 
 
-class road_vehicle {
+class road_vehicle
+{
 	int wheels;
 	int passengers;
 	string vehicle;
