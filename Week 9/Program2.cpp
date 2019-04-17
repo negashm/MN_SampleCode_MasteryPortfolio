@@ -8,11 +8,13 @@ using namespace std;
 
 ///Define Vehicle
 
-class road_vehicle {
+class road_vehicle 
+{	
 	string wheels;
 	string passengers;
 	string vehicle;
 	string car;
+	
 public:
 	void set_wheels(string num) {
 		wheels = num;
