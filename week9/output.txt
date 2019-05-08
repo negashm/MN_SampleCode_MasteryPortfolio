@@ -1,0 +1,9 @@
+Vehicle 1
+Type: truck
+Wheels: 4
+Passenger Capacity: 5 
+Cargo Capacity (lbs): 20 
+
+
+...Program finsihed with exit code 0
+Press ENTER to exit console.
