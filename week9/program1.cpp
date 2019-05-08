@@ -1,6 +1,5 @@
 //Write a program to prompt the user for vehicle specifications. 
 
-#include "pch.h"
 #include <cstdio>
 #include <iostream>
 #include <fstream>
