@@ -1,105 +1,44 @@
 //Populate the objects with data from the file! Store the objects in a Linked List! 
 
 #include <iostream>
-#include <string>
+#include <cstdio>
 #include <fstream>
+#include <string>
+#include <sstream>
 using namespace std;
 
-///Define Vehicle
-
-class road_vehicle 
-{	
-	string wheels;
-	string passengers;
-	string vehicle;
-	string car;
-
-public:
-	void set_wheels(string num) {
-		wheels = num;
-	}
-	string get_wheels() {
-		return wheels;
-	}
-	void set_passengers(string num) {
-		passengers = num;
-	}
-	string get_passengers() {
-		return passengers;
-	}
-	void set_str(string str)
-	{
-		car = str;
-	}
-
-	string get_str()
-	{
-		return car;
-	}
-	void set_vtype(string str)
-	{
-		vehicle = str;
-	}
-	string get_vtype()
-	{
-		return vehicle;
-	}
-};
-
-//Define a truck
-class truck : public road_vehicle {
-	string cargo;
-public:
-	void set_str(string size) {
-		cargo = size;
-	}
-	string get_str() {
-		return cargo;
-	}
-};
-
-//Define Automobile 
-enum type { car, van, wagon };
-class automobile : public road_vehicle {
-	enum type car_type;
-public:
-	void set_str(type t) { car_type = t; }
-	enum type get_str() { return car_type; }
-};
-//Define Node Linked List
-class node
+int main()
 {
-public:
-	road_vehicle data;
-	node *next;
-	node()
+	string type;
+	int wheels;
+	int passengers;
+	int cargolbs;
+	string type2;
+	string line;
+	ifstream file("output.txt");
+	if (file.is_open())
 	{
-		next = NULL;
+		while (getline(file, line))
+		{
+			if (line == type && type == "truck")
+			{
+				while (line != " ")
+				{
+					cout << type << ", wheels: " << wheels << ", passengers: " << passengers << ", cargo: " << cargolbs << endl;
+				}				
+			}
+
+			if (line == type && line == "automobile")
+			{
+				while (line != " ")
+				{
+					cout << type << ", wheels: " << wheels << ", passengers: " << passengers << ", type: " << type2 << endl;
+				}
+			}
+		}
+		file.close();
 	}
-	void insert(road_vehicle data);
-	void print_data();
-};
 
-ostream &operator<<(ostream &stream, road_vehicle data)
-{
-	stream << data.get_vehicle() << endl;
-	stream << data.get_wheels() << endl;
-	stream << data.get_passengers() << endl;
-	stream << data.get_str() << endl;
-	return stream;
+	else cout << "File failed to open";
+	return 0;
 }
-
-int main(){
-
-char str[255];
-ifstream in;
-in.open("test.txt");
-
-  while(in) {
-    in.getline(str, 255);  // delim defaults to '\n'
-    cout << "LINE:*" << str << "*" << endl;
-  } 
-return 0;
-}
-
-//Experiencing some difficulty in regards to the output of the data.
